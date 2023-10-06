@@ -263,7 +263,7 @@
                         <div class="box_inner ">
                             <h2>LET US CONTACT YOU</h2>
                             <div class="details_form ">
-                                <form action="https://website5g.com/ppcmail.php" method="post" id="form1">
+                                <form class="my-form">
                                     <label>Enter Your Name <span style="color:red;">*</span></label>
                                     <div class="input-group mb-2">
                                         <div class="input-group-prepend">
@@ -281,7 +281,7 @@
                                             placeholder="Enter Your Email" required>
                                     </div>
                                     <label>Enter Your Number <span style="color:red;">*</span></label>
-                                    <div class="input-group mb-2">
+<!--                                     <div class="input-group mb-2">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><img src="images/india-flag.png" alt="" />
                                                 &nbsp; +91</span>
@@ -306,6 +306,13 @@
                                             name="tel9" size="1" required>
                                         <input class="inputs one form-control" type="tel" maxlength="1" placeholder="x"
                                             name="tel10" size="1" required>
+                                    </div> -->
+					 <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><img src="images/map.png" alt="" /></span>
+                                        </div>
+                                        <input type="text" name="phone" class="form-control"
+                                            placeholder="Enter Your City" required>
                                     </div>
                                     <label>Enter Your City <span style="color:red;">*</span></label>
                                     <div class="input-group mb-2">
@@ -5775,7 +5782,51 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/function.js"></script>
 
-    
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+   
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Reusable function to handle form submissions
+        const handleSubmit = function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            const formData = new FormData(event.target);
+            const name = formData.get("name");
+            const email = formData.get("email");
+            const mobile = formData.get("phone");
+            const city = formData.get("city");
+            const message = formData.get("message");
+
+            // Do something with the form data (e.g., send it to the server)
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Number:", mobile);
+	    const userEmai1="rps85071@gmail.com";
+		
+            Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "rps85071@gmail.com",
+            Password: "2291E9E0E2939E3456B893971BA038ECF7A9",
+            To: userEmai1, // Replace with your own email address
+            From: "rps85071@gmail.com", // Use the user's entered email address as the "From" address
+            Subject: "New Lead From Social Cults ",
+            Body: `Name: ${name}<br>Email: ${email}<br>Mob Number: ${mobile}<br>City: ${city}<br>Message: ${message}`,
+        }).then(
+          (message) =>  {message ? (window.location.href = "thanks.html") : alert(message);}).catch((error)=>console.log(error));
+
+            // Reset the form fields (optional)
+            event.target.reset();
+        };
+
+        // Get all forms with class "my-form"
+        const forms = document.querySelectorAll(".my-form");
+
+        // Attach event listener to each form
+        forms.forEach((form) => {
+            form.addEventListener("submit", handleSubmit);
+        });
+    });
+
+</script>
 </body>
 
 </html>
