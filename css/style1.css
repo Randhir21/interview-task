@@ -720,7 +720,7 @@ footer form input,footer form textarea {
 }
 .review {
 	background:#f6f8fc;
-	display:none;
+	display:block;
 	position:fixed;
 	bottom:0;
 	width:100%;
