@@ -744,21 +744,22 @@ footer form input,footer form textarea {
 	border-top:8px solid #3a5894;
 }
 .review .close {
-	border:0;
-	background:#3a5894;
-	font-size:15px;
-	font-weight:700;
-	padding:5px 12px;
-	color:#fff;
-	margin-left:-20px;
-	position:fixed;
-	right:0px;
-	z-index:999;
-	top:7vh;
-	-webkit-transition-duration:0.4s;
-	transition-duration:0.4s;
-	text-decoration:none;
-	overflow:hidden;
+	border: 0;
+    background: #fff;
+    font-size: 15px;
+    width: 100px;
+    font-weight: 700;
+    padding: 5px 12px;
+    color: #000;
+    margin-left: -20px;
+    position: fixed;
+    right: 47px;
+    z-index: 999;
+    top: 29vh;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
 }
 #reviewone iframe,#reviewtwo iframe {
 	width:100%;
