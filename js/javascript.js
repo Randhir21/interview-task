@@ -71,7 +71,7 @@ openModalBtns.forEach((button) => {
       modalTitle.innerText = "";
       modalContent.innerHTML = gellery;
     }
-      else if (modalTarget === "modal112") {
+      else if (modalTarget === "modal113") {
       modalTitle.innerText = "";
       modalContent.innerHTML = products;
     }
