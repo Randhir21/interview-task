@@ -741,7 +741,7 @@ footer form input,footer form textarea {
 	height:87vh;
 	overflow-y:scroll;
 	overflow-x:hidden;
-	border-top:8px solid #3a5894;
+	border-top:8px solid #fff;
 }
 .review .close {
 	border: 0;
