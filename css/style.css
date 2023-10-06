@@ -703,19 +703,19 @@ header ul li a {
 
 .review .close {
   float: none;
-  background: transparent;
-  font-size: 16px;
-  border: 0;
-  padding: 7px 10px;
-  color: #6b6b6b;
-  margin-top: -50px;
-  margin-right: -30px;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 3px #bdbdbd;
-  width: 100%;
-  text-align: right;
-  border-bottom: 1px solid #bdbdbd;
-  background: #fff;
+    background: transparent;
+    font-size: 16px;
+    border: 0;
+    padding: 7px 10px;
+    color: #6b6b6b;
+    margin-top: -50px;
+    margin-right: -30px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px #bdbdbd;
+    width: 100%;
+    text-align: right;
+    border-bottom: 1px solid #bdbdbd;
+    background: #fff;
 }
 
 .review h2 {
