@@ -670,7 +670,7 @@ header ul li a {
 .review_overlay.reoverlay:before {
   content: "";
   display: block;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgb(0 0 0 / 9%);
   position: fixed;
   top: 0;
   left: 0;
