@@ -16,6 +16,7 @@ const typeads = document.getElementById("typeads").innerHTML;
 const webwhyus = document.getElementById("webwhyus").innerHTML;
 const kichen = document.getElementById("kichen").innerHTML;
 const gellery = document.getElementById("gellery").innerHTML;
+const products = document.getElementById("products").innerHTML;
 // const webpacakge = document.getElementById("webpacakge").innerHTML;
 const webpagelistname = document.getElementById("webpagelistname").innerHTML;
 const webdesigncategory = document.getElementById("webdesigncategory").innerHTML;
@@ -69,6 +70,10 @@ openModalBtns.forEach((button) => {
     else if (modalTarget === "modal112") {
       modalTitle.innerText = "";
       modalContent.innerHTML = gellery;
+    }
+      else if (modalTarget === "modal112") {
+      modalTitle.innerText = "";
+      modalContent.innerHTML = products;
     }
     else if (modalTarget === "modal12") {
       modalTitle.innerText = "";
