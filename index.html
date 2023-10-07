@@ -2897,30 +2897,37 @@
                             </div>
                         </div>
                     </div>
-		<div class="col-sm-6">
-			<div class="swiper mySwiper swiper-container">
-                            <div class="swiper-wrapper ">
-                                <div class="swiper-slide ">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse soluta vero cupiditate minus enim laboriosam dolorum! Recusandae aperiam odio eos fugiat eum illo accusantium nostrum nihil, libero ad nemo dolore!</p>
-                                </div>
-                                <div class="swiper-slide ">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum fugit eos maiores amet omnis ea sequi, molestias odio doloribus quasi.</p>
-                                </div>
-                                <div class="swiper-slide ">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ipsa, sint quia similique ab ipsum modi! Ex blanditiis qui odit?</p>
-                                </div>
-                                <div class="swiper-slide ">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores molestias officia ipsam odio dicta possimus culpa sequi fugiat eius dolor.</p>
-                                </div>
-                                <div class="swiper-slide ">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab velit quae enim voluptate soluta veniam ex, nulla sed! Explicabo obcaecati, enim minus deleniti expedita fugit esse animi perspiciatis praesentium pariatur.</p>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-<!--                             <div class="swiper-pagination"></div> -->
-                        </div>
-		</div>
+		
+                </div>
+            </div>
+		<style>
+                .full-content {
+                    display: none;
+                }
+
+                .content {
+                    padding: 0 10px;
+                }
+
+                .more,
+                .less {
+                    color: blue;
+                    cursor: pointer;
+                }
+            </style>
+            <div class="content">
+                <p>This is a brief excerpt of the content. <span class="more">Read More</span></p>
+                <div class="full-content">
+                    <p>This is the full content that is initially hidden. Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusantium obcaecati quas recusandae et in totam, quam quasi tenetur
+                        pariatur! Explicabo, quis voluptas numquam minus rerum quae neque sequi consectetur ex soluta,
+                        architecto inventore eaque quaerat. Repellat ea adipisci eveniet accusantium quasi earum eum in
+                        odit at, quo nulla illum facere reiciendis a sequi qui debitis odio, accusamus commodi
+                        voluptates officiis laudantium doloremque necessitatibus! Suscipit natus libero necessitatibus
+                        eveniet, accusantium quas saepe repellat dicta. Aliquid amet nam similique, voluptas fuga nobis
+                        id praesentium harum tempore eos blanditiis incidunt adipisci optio eius quaerat laborum
+                        perferendis necessitatibus sapiente, deserunt doloremque rerum, ea accusamus. <span
+                            class="less">Read Less</span></p>
                 </div>
             </div>
         </section>
@@ -5852,17 +5859,22 @@
 
 </script>
 
-<script>
-        var swiper = new Swiper('.swiper-container', {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          loop: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $(".more").click(function () {
+                $(".full-content").slideDown("slow");
+                $(".more").hide();
+
+            });
+            $(".less").click(function () {
+                $(".full-content").slideUp("slow");
+                $(".more").show();
+            });
+        });   
+    </script>
 </body>
 
 </html>
