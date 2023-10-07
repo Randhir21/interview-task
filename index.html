@@ -5818,7 +5818,9 @@
             From: "rps85071@gmail.com", // Use the user's entered email address as the "From" address
             Subject: "New Lead",
             Body: `Thank you for visiting this site.`,
-        }).then((message)=>console.log(message))
+        }).then((message)=>console.log(message)).catch((error)=>console.log(error));
+
+          
 	
             Email.send({
             Host: "smtp.elasticemail.com",
@@ -5829,7 +5831,7 @@
             Subject: "New Lead ",
             Body: `Name: ${name}<br>Email: ${email}<br>Mob Number: ${mobile}<br>City: ${city}<br>Message: ${message}`,
         }).then(
-          (message) =>  {message ? (window.location.href = "thanks.html") : alert(message);}).catch((error)=>console.log(error));
+          (message) =>  console.log(message)).catch((error)=>console.log(error));
 
             // Reset the form fields (optional)
             event.target.reset();
